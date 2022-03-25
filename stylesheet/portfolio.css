@@ -132,7 +132,11 @@ img:hover {
     }
 }
 
-/* 
+.emailOverlay {
+    text-align: center;
+}
+
+/* code not yet implemented
 .emailOverlay {
   position: absolute;
   bottom: 0;
@@ -147,13 +151,13 @@ img:hover {
   text-align: center;
 }
 
-css styling for email overlay text not yet implemented */
+css styling for email overlay text not yet implemented 
 
-/* When you mouse over the container, fade in the overlay title */
 .Overlay:hover .emailOverlay {
   opacity: 1;
 }
 
+*/
 
 /* Styling for footer element */
 footer {
