@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
         <title>Jacob's Portfolio</title>
+        <link rel="shortcut icon" type="img/jpg" href="images/jacobIcon.jpg">
         <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
     </head>
 
@@ -17,6 +18,8 @@
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
             <a href="#Contact">Contact</a>
+            <!--Navbar Form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
         <!--Breaks inserted to add space between navbar and the first heading-->
@@ -50,11 +53,69 @@
             </strong>
         </div>
 
+                <!-- Slideshow section added -->
+                <div id="Slideshow">
+                    <div id="Slideshow_Background">
+                        <div id="Slideshow_Container">
+                            <!-- Slide 1 of 6 -->
+                            <div class="mySlides fade">
+                                <img class="Slideshow_Images" src="images/slideshow/jacob.jpg" alt="Picture of yourself">
+                                <div class="text">I'm available to assist you on your project!</div>
+                            </div>
+                            <!-- Slide 2 of 6 -->
+                            <div class="mySlides fade">
+                                <img class="Slideshow_Images" src="images/slideshow/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
+                                <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                            </div>
+                            <!-- Slide 3 of 6 -->
+                            <div class="mySlides fade">
+                                <img class="Slideshow_Images" src="images/slideshow/Python.png" alt="Python logo">
+                                <div class="text">the popular programming language Python,</div>
+                            </div>
+                            <!-- Slide 4 of 6 -->
+                            <div class="mySlides fade">
+                                <img class="Slideshow_Images" src="images/slideshow/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                                <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                            </div>
+                            <!-- Slide 5 of 6 -->
+                            <div class="mySlides fade">
+                                <img class="Slideshow_Images" src="images/slideshow/SQL_and_Database.jpg" alt="SQL logo">
+                                <div class="text">back end development, databases and SQL.</div>
+                            </div>
+                            <!-- UNUSED 
+                                Slide 6 of 6 
+                            <div class="mySlides fade">
+                                <img class="Slideshow_Images" src="images/Square Custom Picture.png"
+                                    alt="Replace with a picture of your choosing">
+                                <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                            </div>
+                            -->
+                            <!-- Previous and next buttons -->
+                            <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                        <br> <!-- Adds a space between the slideshow images and the dots -->
+                
+                        <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                        <div style="text-align: center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <!-- UNUSED
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            -->
+                        </div>
+                    </div>
+                </div>
+
+
         <!--About section-->
         <div class="Row" id="About">
             <!--Left column-->
             <div class="Column_1">
-                <img src="images/jacob.jpg" alt="">
+                <img src="images/Jacob Fam.jpg" alt="">
             </div>
             <!--Right column-->
             <div class="Column_1">
@@ -86,27 +147,37 @@
             </div>
         </div>
 
-        <!--Contact section-->
-        <div class="Row" id="Contact">
+        <!-- Final Section-->
+            <div class="Row" id="Contact">
             <!--Contact image, left column-->
             <div class="Column_1 Column_tall1">
-                <a href="https://www.linkedin.com/in/jacob-flaherty-0389a2122/" target="_blank"><img src="images/li.png" alt="Contact_Image"></a>
+                <a href="https://www.linkedin.com/in/jacob-flaherty-0389a2122/" target="_blank"><img src="images/li.png"
+                        alt="Contact_Image"></a>
             </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall1">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <!-- <label>Name:</label>
-                        <input type="Email" placeholder="Please enter your email here">  (code I'm having trouble with)-->
-                    <label>Email:</label>
-                        <input type="email" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <br>
-                        <br>
-                        <br>
-                        <input type="submit" value="SUBMIT">
+            <div class="Row" id="Contact">
+                <!--Contact image, left column-->
+                <div class="Column_1 Column_tall2">
+                    <a href="mailto:jacob@theflahertys.us" target="_blank"><img src="images/email.png"
+                            alt="Contact_Image"></a>
+                    <div class="emailOverlay">Email me!</div>
+                </div>
+        </div>
+
+        <!--Contact section-->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mqkndkqb" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                    <input type="text" placeholder="Type your message here" name="message">
+        
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
@@ -118,6 +189,7 @@
                 <br>
             </p>
         </footer>
+        <script src="JS/jacobjs.js"></script>
     </body>
     
 </html>
