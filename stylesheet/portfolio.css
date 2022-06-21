@@ -449,6 +449,8 @@ footer {
     background-image: linear-gradient(to right, #70d2ff, #50b5ff, #70d2ff, #3ba2ff);
     background-size: 300% 100%;
     transition: all .5s ease-in-out;
+    min-height: 5rem;
+    min-width: 10rem;
 
 }
 
@@ -498,9 +500,9 @@ footer {
 button {
     font-family: "Trebuchet MS", Optima;
     letter-spacing: .3vw; /* Adds slight spacing between the letters */
-    font-size: 1vw; /* Relative sizing of text */
+    font-size: 2vw; /* Relative sizing of text */
     font-weight: bold; 
-    padding: 1vw; /* Adds padding to the text in the button */
+    padding: 0.5vw; /* Adds padding to the text in the button */
     cursor: pointer; /* Changes the cursor to pointer over button elements */
     width: 100%; /* Sets the width of the buttons to 100% of their containers */
     height: auto; /* Allows the height to be resized depending on the content showing */
@@ -524,7 +526,9 @@ button:hover, .form-container .btn:hover {
     border-color: black;
     margin-bottom: 1vh; /* Adds space between the submit button and the close button */
 }
-
+.form-container .btn:hover {
+    background-color: green;
+}
 /* Close button */
 .form-container .cancel {
     background-color: black;
