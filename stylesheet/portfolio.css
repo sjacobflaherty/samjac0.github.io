@@ -275,7 +275,7 @@ footer {
 
 /* Slideshow section / container */
 #Slideshow_Container {
-    width: 35.5vw; /* Relative sizing of the container for the slidewshow set to 39.5% of the viewport width */
+    width: 33.5vw; /* Relative sizing of the container for the slidewshow set to 39.5% of the viewport width */
     height: auto; /* The height of the container is automatically adjusted based on the content it is displaying */
     padding-top: 4%; /* Adds a small padding to the top of the slideshow container */
     position: relative; /* This sets the container relative to its normal positioning */
@@ -329,7 +329,7 @@ footer {
 }
 
 /* Slideshow text */
-.text {
+.Slideshow_Text {
     color: white; 
     padding: 1vw;
     position: absolute; /* This ensures the text is positioned within the image */

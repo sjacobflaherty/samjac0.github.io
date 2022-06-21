@@ -21,6 +21,17 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+const slideTime = 1000;
+let slideInterval = setInterval(() => plusSlides(slideIndex += n), slideTime);
+
+function jumpSlide(n) {
+    clearInterval(slideInterval);
+    plusSlides(slideIndex += n)
+    slideInterval = setInterval(() => plusSlides(slideIndex += n), slideTime);
+}
+function timeSlides(n) {
+
+}
 
 function showSlides(n) {
     var slides = document.getElementsByClassName("mySlides"); // This takes all elements with the class name "mySlides" and stores them in the variable array "slides"
